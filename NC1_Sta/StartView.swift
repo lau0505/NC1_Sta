@@ -7,24 +7,24 @@
 
 import SwiftUI
 
-struct Real_StartView: View {
+struct StartView: View {
     var body: some View {
         VStack{
            
             VStack(alignment: .leading){
                 Text("나만의")
                 .font(.largeTitle)
-                .fontWeight(.bold)
+                .fontWeight(.heavy)
                 .foregroundColor(Color.orange)
                 .multilineTextAlignment(.leading)
-                .padding(.top, 50.0)
+                .padding([.top, .trailing], 50.0)
             
             Text("Swift 문법 저장소.")
                 .font(.largeTitle)
-                .fontWeight(.bold)
+                .fontWeight(.heavy)
                 .foregroundColor(Color.orange)
                 .multilineTextAlignment(.leading)
-                .padding(2.0)
+                .padding([.trailing], 100.0)
             }
             Spacer().frame(height: 40)
             
@@ -35,12 +35,14 @@ struct Real_StartView: View {
                 .fontWeight(.medium)
                 .foregroundColor(Color.orange)
                 .multilineTextAlignment(.leading)
+                .padding([.trailing], 100.0)
                 
             Text("나만의 언어로 Swift 문법에 대해 정리해보세요.")
                 .font(.body)
                 .fontWeight(.medium)
                 .foregroundColor(Color.orange)
                 .multilineTextAlignment(.leading)
+                .padding([.trailing], 40.0)
             }
             Spacer()
             
@@ -71,8 +73,8 @@ struct MyButtonStyle: ButtonStyle {
     
 
 
-struct Real_StartView_Previews: PreviewProvider {
+struct StartView_Previews: PreviewProvider {
     static var previews: some View {
-        Real_StartView()
+       StartView()
     }
 }

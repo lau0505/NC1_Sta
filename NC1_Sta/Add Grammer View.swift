@@ -19,7 +19,7 @@ struct Add_Grammer_View: View {
             .fontWeight(.medium)
             .foregroundColor(Color.gray)
             .multilineTextAlignment(.leading)
-            .padding(.leading)
+            .padding([.trailing], 300.0)
         
             TextField("입력하세요" , text: $name)
                 .padding(.horizontal)
@@ -30,7 +30,7 @@ struct Add_Grammer_View: View {
                 .fontWeight(.medium)
                 .foregroundColor(Color.gray)
                 .multilineTextAlignment(.leading)
-                .padding(.leading)
+                .padding([.trailing], 330.0)
             
             TextField("입력하세요" , text: $name)
                 .padding(.horizontal)
@@ -41,30 +41,26 @@ struct Add_Grammer_View: View {
                 .fontWeight(.medium)
                 .foregroundColor(Color.gray)
                 .multilineTextAlignment(.leading)
-                .padding(.leading)
+                .padding([.trailing], 330.0)
             
                 TextField("입력하세요" , text: $name)
                     .padding(.horizontal)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             
-            Text("코드 사진")
+            Text("코드 사진(선택)")
                 .font(.body)
                 .fontWeight(.medium)
                 .foregroundColor(Color.gray)
                 .multilineTextAlignment(.leading)
+                .padding([.trailing], 260.0)
             
             HStack{
-                TextField("입력하세요" , text: $name)
-                    .padding(.horizontal)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-
-
-                
                 Image(systemName: "camera")
                     .foregroundColor(Color.gray)
+                    .padding([.leading], 300.0)
                 Image(systemName: "photo")
                     .foregroundColor(Color.gray)
-                    .padding(.trailing, 20.0)
+
             }
             Spacer().frame(height:250)
             
