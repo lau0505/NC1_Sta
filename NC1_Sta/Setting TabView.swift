@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct Setting_TabView: View {
+    @State private var someToggle = true
+    
     var body: some View {
-        ZStack {
-                    Circle()
-                        .frame(width: 300, height: 300)
-                        .foregroundColor(.pink)
-                    
-                    Text("\(3)")
-                        .font(.system(size: 70))
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                }
+    
+        Toggle("알림 설정", isOn: $someToggle) {
+            
+            if someToggle {
+                Text("On.")
+            } else {
+                Text("Off.")
+            }
+        }
+        .padding()
     }
 }
 

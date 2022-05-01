@@ -14,9 +14,8 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "pencil")
                     Text("문법 추가")
-                        
                 }
-            Grammar_Storage_TabView()
+            Grammer_Storage_TabView()
                 .tabItem {
                     Image(systemName: "book.fill")
                     Text("문법 저장소")
@@ -30,15 +29,7 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "gearshape.fill")
                     Text("설정")
-                
-                
             }
-        
-        
-        
-        
-        
-        
         }
     }
 }

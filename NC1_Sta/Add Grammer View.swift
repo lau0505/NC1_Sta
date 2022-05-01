@@ -62,18 +62,27 @@ struct Add_Grammer_View: View {
                     .foregroundColor(Color.gray)
 
             }
-            Spacer().frame(height:250)
+            
             
                 Button(action: {}){ //버튼의 보여지는 UI 코드
-                           Text("저장하기")
+                           Text("수정하기")
                     }
                     .font(.system(size:30, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
                     .padding()
                     .background(Color.orange)
                     .clipShape(Capsule())
-                
             
+                Button(action: {}){ //버튼의 보여지는 UI 코드
+                       Text("저장하기")
+                    }
+                    .font(.system(size:30, weight: .bold, design: .rounded))
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.orange)
+                    .clipShape(Capsule())
+            
+               
         }
     }
 }

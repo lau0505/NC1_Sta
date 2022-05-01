@@ -14,10 +14,12 @@
 		8E473ED0281D0F1D002482C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E473ECF281D0F1D002482C7 /* Preview Assets.xcassets */; };
 		8E5F59AE281D620A0099CEEF /* Add Grammer View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F59AD281D620A0099CEEF /* Add Grammer View.swift */; };
 		8E5F59B0281D90020099CEEF /* Add Grammer TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F59AF281D90020099CEEF /* Add Grammer TabView.swift */; };
-		8E5F59B2281D90F40099CEEF /* Grammar Storage TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F59B1281D90F40099CEEF /* Grammar Storage TabView.swift */; };
+		8E5F59B2281D90F40099CEEF /* Grammer Storage TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F59B1281D90F40099CEEF /* Grammer Storage TabView.swift */; };
 		8E5F59B4281D91F20099CEEF /* Grammer Correction TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F59B3281D91F20099CEEF /* Grammer Correction TabView.swift */; };
 		8E5F59B6281D92270099CEEF /* Bookmark TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F59B5281D92270099CEEF /* Bookmark TabView.swift */; };
 		8E5F59B8281D99E50099CEEF /* Setting TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F59B7281D99E50099CEEF /* Setting TabView.swift */; };
+		8E5F59BA281ED3310099CEEF /* Setting Toggle View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F59B9281ED3310099CEEF /* Setting Toggle View.swift */; };
+		8E5F59BE281EE3A00099CEEF /* Practice SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F59BD281EE3A00099CEEF /* Practice SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,10 +31,12 @@
 		8E473ECF281D0F1D002482C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E5F59AD281D620A0099CEEF /* Add Grammer View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Add Grammer View.swift"; sourceTree = "<group>"; };
 		8E5F59AF281D90020099CEEF /* Add Grammer TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Add Grammer TabView.swift"; sourceTree = "<group>"; };
-		8E5F59B1281D90F40099CEEF /* Grammar Storage TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Grammar Storage TabView.swift"; sourceTree = "<group>"; };
+		8E5F59B1281D90F40099CEEF /* Grammer Storage TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Grammer Storage TabView.swift"; sourceTree = "<group>"; };
 		8E5F59B3281D91F20099CEEF /* Grammer Correction TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Grammer Correction TabView.swift"; sourceTree = "<group>"; };
 		8E5F59B5281D92270099CEEF /* Bookmark TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bookmark TabView.swift"; sourceTree = "<group>"; };
 		8E5F59B7281D99E50099CEEF /* Setting TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Setting TabView.swift"; sourceTree = "<group>"; };
+		8E5F59B9281ED3310099CEEF /* Setting Toggle View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Setting Toggle View.swift"; sourceTree = "<group>"; };
+		8E5F59BD281EE3A00099CEEF /* Practice SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Practice SwiftUIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +74,12 @@
 				8E022F25281D4AC400DDB0A8 /* StartView.swift */,
 				8E5F59AD281D620A0099CEEF /* Add Grammer View.swift */,
 				8E5F59AF281D90020099CEEF /* Add Grammer TabView.swift */,
-				8E5F59B1281D90F40099CEEF /* Grammar Storage TabView.swift */,
+				8E5F59B1281D90F40099CEEF /* Grammer Storage TabView.swift */,
 				8E5F59B3281D91F20099CEEF /* Grammer Correction TabView.swift */,
 				8E5F59B5281D92270099CEEF /* Bookmark TabView.swift */,
 				8E5F59B7281D99E50099CEEF /* Setting TabView.swift */,
+				8E5F59B9281ED3310099CEEF /* Setting Toggle View.swift */,
+				8E5F59BD281EE3A00099CEEF /* Practice SwiftUIView.swift */,
 				8E473ECC281D0F1D002482C7 /* Assets.xcassets */,
 				8E473ECE281D0F1D002482C7 /* Preview Content */,
 			);
@@ -159,12 +165,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E473ECB281D0F1C002482C7 /* ContentView.swift in Sources */,
+				8E5F59BE281EE3A00099CEEF /* Practice SwiftUIView.swift in Sources */,
 				8E5F59B6281D92270099CEEF /* Bookmark TabView.swift in Sources */,
 				8E5F59B4281D91F20099CEEF /* Grammer Correction TabView.swift in Sources */,
 				8E022F26281D4AC400DDB0A8 /* StartView.swift in Sources */,
 				8E5F59AE281D620A0099CEEF /* Add Grammer View.swift in Sources */,
+				8E5F59BA281ED3310099CEEF /* Setting Toggle View.swift in Sources */,
 				8E5F59B0281D90020099CEEF /* Add Grammer TabView.swift in Sources */,
-				8E5F59B2281D90F40099CEEF /* Grammar Storage TabView.swift in Sources */,
+				8E5F59B2281D90F40099CEEF /* Grammer Storage TabView.swift in Sources */,
 				8E473EC9281D0F1C002482C7 /* NC1_StaApp.swift in Sources */,
 				8E5F59B8281D99E50099CEEF /* Setting TabView.swift in Sources */,
 			);
