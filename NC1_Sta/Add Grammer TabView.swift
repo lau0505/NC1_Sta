@@ -8,17 +8,24 @@
 import SwiftUI
 
 struct Add_Grammer_TabView: View {
+   
     var body: some View {
-        ZStack {
-                    Circle()
-                        .frame(width: 300, height: 300)
-                        .foregroundColor(.green)
-                    
-                    Text("\(3)")
-                        .font(.system(size: 70))
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                }
+        //GeometryReader { geometry in
+        VStack {
+            ZStack {
+                Text("fff")
+
+            }
+            .frame(width: 370, height: 200)
+            .cornerRadius(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color("MainColor"), lineWidth: 1)
+                    )
+                    .padding([.top, .horizontal])
+        //}
+        }
+        .background(Color.orange)
     }
 }
 

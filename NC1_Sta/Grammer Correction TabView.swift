@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Grammer_Correction_TabView: View {
+    @State private var name = ""
+    
     var body: some View {
         VStack{
             

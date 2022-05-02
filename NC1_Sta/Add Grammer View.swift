@@ -10,6 +10,8 @@ import SwiftUI
 struct Add_Grammer_View: View {
     
     @State private var name: String = ""
+    @State private var meaning = ""
+    @State private var explanation = ""
     
     var body: some View {
         VStack{
@@ -20,10 +22,11 @@ struct Add_Grammer_View: View {
             .foregroundColor(Color.gray)
             .multilineTextAlignment(.leading)
             .padding([.trailing], 300.0)
+            .padding(.top,-50)
         
             TextField("입력하세요" , text: $name)
-                .padding(.horizontal)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.all)
+                .textFieldStyle(.automatic)
             
             Text("의미")
                 .font(.body)
@@ -31,10 +34,11 @@ struct Add_Grammer_View: View {
                 .foregroundColor(Color.gray)
                 .multilineTextAlignment(.leading)
                 .padding([.trailing], 330.0)
+                .padding(.top, 40)
             
-            TextField("입력하세요" , text: $name)
-                .padding(.horizontal)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+            TextField("입력하세요" , text: $meaning)
+                .padding(.all)
+                .textFieldStyle(.automatic)
                   
             Text("설명")
                 .font(.body)
@@ -42,10 +46,11 @@ struct Add_Grammer_View: View {
                 .foregroundColor(Color.gray)
                 .multilineTextAlignment(.leading)
                 .padding([.trailing], 330.0)
+                .padding(.top, 40)
             
-                TextField("입력하세요" , text: $name)
-                    .padding(.horizontal)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField("입력하세요" , text: $explanation)
+                    .padding(.all)
+                    .textFieldStyle(.automatic)
             
             Text("코드 사진(선택)")
                 .font(.body)
@@ -53,6 +58,7 @@ struct Add_Grammer_View: View {
                 .foregroundColor(Color.gray)
                 .multilineTextAlignment(.leading)
                 .padding([.trailing], 260.0)
+                .padding(.top, 40)
             
             HStack{
                 Image(systemName: "camera")
@@ -62,27 +68,14 @@ struct Add_Grammer_View: View {
                     .foregroundColor(Color.gray)
 
             }
-            
-            
-                Button(action: {}){ //버튼의 보여지는 UI 코드
-                           Text("수정하기")
-                    }
-                    .font(.system(size:30, weight: .bold, design: .rounded))
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.orange)
-                    .clipShape(Capsule())
+            .padding(.bottom, 100)
+    
             
                 Button(action: {}){ //버튼의 보여지는 UI 코드
                        Text("저장하기")
                     }
-                    .font(.system(size:30, weight: .bold, design: .rounded))
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.orange)
-                    .clipShape(Capsule())
+                .buttonStyle(MyButtonStyle())
             
-               
         }
     }
 }

@@ -9,11 +9,9 @@ import SwiftUI
 
 struct Grammer_Storage_TabView: View {
     var body: some View {
-       List(storage){ list in
-         CardView(list: list)
+            Text("ssss")
             
         }
-        .listStyle(SidebarListStyle())
 }
 
 
@@ -45,5 +43,4 @@ struct Grammer_Storage_TabView_Previews: PreviewProvider {
     static var previews: some View {
       Grammer_Storage_TabView()
     }
- }
 }

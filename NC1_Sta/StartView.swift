@@ -9,10 +9,13 @@ import SwiftUI
 
 struct StartView: View {
     var body: some View {
-        VStack{
-           
+        ZStack{
+            Image("MockupImage")
+                .resizable()
+                .frame(width: 500, height: 333)
+                .offset(x: 0, y: -300)
             VStack(alignment: .leading){
-                Text("나만의")
+            Text("나만의")
                 .font(.largeTitle)
                 .fontWeight(.heavy)
                 .foregroundColor(Color.orange)
@@ -26,34 +29,34 @@ struct StartView: View {
                 .multilineTextAlignment(.leading)
                 .padding([.trailing], 100.0)
             }
+            .offset(x: 10, y: -300)
             Spacer().frame(height: 40)
             
             VStack(alignment: .leading){
             
             Text("어려웠던 영어 설명은 이제 그만!")
-                .font(.body)
+                .font(.system(size: 15))
                 .fontWeight(.medium)
                 .foregroundColor(Color.orange)
                 .multilineTextAlignment(.leading)
                 .padding([.trailing], 100.0)
                 
             Text("나만의 언어로 Swift 문법에 대해 정리해보세요.")
-                .font(.body)
+                .font(.system(size: 15))
                 .fontWeight(.medium)
                 .foregroundColor(Color.orange)
                 .multilineTextAlignment(.leading)
                 .padding([.trailing], 40.0)
             }
-            Spacer()
+            .offset(x: -10, y: -180)
+            
             
             Button(action: {}){ //버튼의 보여지는 UI 코드
                        Text("시작하기")
                 }
-                .font(.system(size:30, weight: .bold, design: .rounded))
-                .foregroundColor(.white)
-                .padding()
-                .background(Color.orange)
-                .clipShape(Capsule())
+                .buttonStyle(MyButtonStyle())
+                .padding(.bottom, 59)
+                .offset(x: 0, y: 350)
         }
     }
 }
@@ -62,11 +65,13 @@ struct StartView: View {
 struct MyButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
-            .font(.system(size:30, weight: .bold, design: .rounded))
-            .foregroundColor(.white)
-            .padding()
-            .background(Color.orange)
-            .clipShape(Capsule())
+            .frame(maxWidth: 300)
+                        .frame(height: 55)
+                        .font(.system(size:30, weight: .bold, design: .rounded))
+                        .foregroundColor(Color.white)
+                        .background(Color.orange)
+                        .cornerRadius(30)
+                        .padding(.horizontal, 30)
     }
 }
     

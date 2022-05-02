@@ -10,12 +10,12 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            Add_Grammer_TabView()
+            StartView()
                 .tabItem {
                     Image(systemName: "pencil")
                     Text("문법 추가")
                 }
-            Grammer_Storage_TabView()
+            Add_Grammer_View()
                 .tabItem {
                     Image(systemName: "book.fill")
                     Text("문법 저장소")

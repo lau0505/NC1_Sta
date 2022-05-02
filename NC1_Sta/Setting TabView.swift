@@ -11,17 +11,16 @@ struct Setting_TabView: View {
     @State private var someToggle = true
     
     var body: some View {
-    
-        Toggle("알림 설정", isOn: $someToggle) {
-            
-            if someToggle {
-                Text("On.")
-            } else {
-                Text("Off.")
-            }
-        }
+        VStack{
+        Toggle("알림 설정", isOn: $someToggle)
         .padding()
+        
+        Toggle("다크모드 설정", isOn: $someToggle)
+        .padding()
+        
+       }
     }
+
 }
 
 struct Setting_TabView_Previews: PreviewProvider {
