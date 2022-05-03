@@ -40,11 +40,15 @@ struct Bookmark_Card_View: View {
                         .padding(.leading, 20)
                     
                     HStack{
-                        Image(systemName: "triangle")
-                            
+                        Image(systemName: "checkmark")
+                            .foregroundColor(Color.green)
+                            .padding(.leading, 220)
+                            .padding(.top, 20)
                         Text("이해완료")
+                            .font(.body)
                             .foregroundColor(Color.white)
-                        padding(.leading, 50)
+                            .padding(.top, 20)
+                    
                     }
                     
                 }
@@ -66,6 +70,6 @@ struct Bookmark_Card_View: View {
 
 struct Bookmark_Card_View_Previews: PreviewProvider {
     static var previews: some View {
-        Bookmark_Card_View(title: "조건문", meaning: "if/else")
+        Bookmark_Card_View(title: "조건문", meaning: "if/else;")
     }
 }
