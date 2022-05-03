@@ -1,13 +1,13 @@
 //
-//  Card View.swift
+//  Bookmark Card View.swift
 //  NC1_Sta
 //
-//  Created by 전호정 on 2022/05/03.
+//  Created by 전호정 on 2022/05/04.
 //
 
 import SwiftUI
 
-struct Card_View: View {
+struct Bookmark_Card_View: View {
     @State var title: String
     @State var meaning: String
     
@@ -23,7 +23,7 @@ struct Card_View: View {
                 
                 
             })
-           
+            
             HStack {
                 VStack(alignment: .leading) {
                     Text("\(title)")
@@ -38,26 +38,34 @@ struct Card_View: View {
                         .fontWeight(.medium)
                         .foregroundColor(Color("CustomGrayColor"))
                         .padding(.leading, 20)
-                       
+                    
+                    HStack{
+                        Image(systemName: "triangle")
+                            
+                        Text("이해완료")
+                            .foregroundColor(Color.white)
+                        padding(.leading, 50)
+                    }
+                    
                 }
                 Spacer()
             }
             Spacer()
         }
-        .frame(width: 300, height: 200)
+        .frame(width: 330, height: 200)
         .background(Color.orange)
         .cornerRadius(20)
-            .overlay(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color("MainColor"))
-            )
-            .padding([.top, .horizontal])
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(Color("MainColor"))
+        )
+        .padding([.top, .horizontal])
         
     }
 }
 
-struct Card_View_Previews: PreviewProvider {
+struct Bookmark_Card_View_Previews: PreviewProvider {
     static var previews: some View {
-        Card_View(title: "조건문", meaning: "if/else")
+        Bookmark_Card_View(title: "조건문", meaning: "if/else")
     }
 }

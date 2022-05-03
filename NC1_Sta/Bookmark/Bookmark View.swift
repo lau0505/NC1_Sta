@@ -9,12 +9,9 @@ import SwiftUI
 
 struct Bookmark_View: View {
     var body: some View {
-        Text("이해완료")
+        Bookmark_Card_View(title: "조건문", meaning: "if/else / switch case;")
     }
-    
-    
 }
-
 struct Bookmark_View_Previews: PreviewProvider {
     static var previews: some View {
         Bookmark_View()

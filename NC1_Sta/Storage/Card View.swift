@@ -1,18 +1,17 @@
 //
-//  Add Grammer TabView.swift
+//  Card View.swift
 //  NC1_Sta
 //
-//  Created by 전호정 on 2022/05/01.
+//  Created by 전호정 on 2022/05/03.
 //
 
 import SwiftUI
 
-struct Add_Grammar_TabView: View {
-   
+struct Card_View: View {
+    @State var title: String
+    @State var meaning: String
+    
     var body: some View {
-       
-        
-        
         VStack(alignment: .trailing) {
             Button(action: {
                 
@@ -27,31 +26,25 @@ struct Add_Grammar_TabView: View {
            
             HStack {
                 VStack(alignment: .leading) {
-                    Text("조건문")
+                    Text("\(title)")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .padding(.bottom, 20)
                         .padding(.leading, 20)
                     
-                    Text("if/else;")
+                    Text("\(meaning)")
                         .font(.body)
                         .fontWeight(.medium)
                         .foregroundColor(Color("CustomGrayColor"))
                         .padding(.leading, 20)
                        
-                    Text("switch/case;")
-                        .font(.body)
-                        .fontWeight(.medium)
-                        .foregroundColor(Color("CustomGrayColor"))
-                        .padding(.leading, 20)
-                    
                 }
                 Spacer()
             }
             Spacer()
         }
-        .frame(width: 300, height: 200)
+        .frame(width: 330, height: 200)
         .background(Color.orange)
         .cornerRadius(20)
             .overlay(
@@ -63,8 +56,8 @@ struct Add_Grammar_TabView: View {
     }
 }
 
-struct Add_Grammar_TabView_Previews: PreviewProvider {
+struct Card_View_Previews: PreviewProvider {
     static var previews: some View {
-        Add_Grammar_TabView()
+        Card_View(title: "조건문", meaning: "if/else")
     }
 }

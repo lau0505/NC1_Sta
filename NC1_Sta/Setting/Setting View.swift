@@ -12,13 +12,18 @@ struct Setting_View: View {
     @State private var darkmode = true
     
     var body: some View {
+        
         VStack{
-        Toggle("알림 설정", isOn: $alert)
+            Toggle("알림 설정", isOn: $alert)
+                .foregroundColor(Color.gray)
+                .font(.system(size: 20))
                 .toggleStyle(SwitchToggleStyle(tint: Color.orange))
                 .padding(.horizontal, 30)
                 .padding(.bottom, 20)
         
         Toggle("다크모드 설정", isOn: $darkmode)
+                .foregroundColor(Color.gray)
+                .font(.system(size: 20))
                 .toggleStyle(SwitchToggleStyle(tint: Color.orange))
                 .padding(.horizontal, 30)
                 .padding(.bottom, 20)
@@ -29,6 +34,7 @@ struct Setting_View: View {
     }
 
 }
+
 
 struct Setting_View_Previews: PreviewProvider {
     static var previews: some View {
