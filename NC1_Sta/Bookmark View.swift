@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Bookmark_TabView: View {
+struct Bookmark_View: View {
     var body: some View {
         ZStack {
                     Circle()
@@ -22,8 +22,8 @@ struct Bookmark_TabView: View {
     }
 }
 
-struct Bookmark_TabView_Previews: PreviewProvider {
+struct Bookmark_View_Previews: PreviewProvider {
     static var previews: some View {
-        Bookmark_TabView()
+        Bookmark_View()
     }
 }

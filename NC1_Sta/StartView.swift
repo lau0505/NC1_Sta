@@ -12,8 +12,10 @@ struct StartView: View {
         ZStack{
             Image("MockupImage")
                 .resizable()
-                .frame(width: 500, height: 333)
-                .offset(x: 0, y: -300)
+                .offset(x: 0, y: 0)
+                .frame(width: 416, height: 900)
+            
+            
             VStack(alignment: .leading){
             Text("나만의")
                 .font(.largeTitle)
@@ -66,8 +68,8 @@ struct MyButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .frame(maxWidth: 300)
-                        .frame(height: 55)
-                        .font(.system(size:30, weight: .bold, design: .rounded))
+                        .frame(height: 45)
+                        .font(.system(size:20, weight: .bold, design: .rounded))
                         .foregroundColor(Color.white)
                         .background(Color.orange)
                         .cornerRadius(30)

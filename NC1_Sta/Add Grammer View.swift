@@ -21,8 +21,9 @@ struct Add_Grammer_View: View {
             .fontWeight(.medium)
             .foregroundColor(Color.gray)
             .multilineTextAlignment(.leading)
-            .padding([.trailing], 300.0)
-            .padding(.top,-50)
+            .padding(.top, 30)
+            .padding(.trailing, 300.0)
+            
         
             TextField("입력하세요" , text: $name)
                 .padding(.all)
@@ -33,7 +34,7 @@ struct Add_Grammer_View: View {
                 .fontWeight(.medium)
                 .foregroundColor(Color.gray)
                 .multilineTextAlignment(.leading)
-                .padding([.trailing], 330.0)
+                .padding(.trailing, 330.0)
                 .padding(.top, 40)
             
             TextField("입력하세요" , text: $meaning)
@@ -45,25 +46,22 @@ struct Add_Grammer_View: View {
                 .fontWeight(.medium)
                 .foregroundColor(Color.gray)
                 .multilineTextAlignment(.leading)
-                .padding([.trailing], 330.0)
+                .padding(.trailing, 330.0)
                 .padding(.top, 40)
             
-                TextField("입력하세요" , text: $explanation)
+            TextField("입력하세요" , text: $explanation)
                     .padding(.all)
                     .textFieldStyle(.automatic)
             
-            Text("코드 사진(선택)")
-                .font(.body)
-                .fontWeight(.medium)
-                .foregroundColor(Color.gray)
-                .multilineTextAlignment(.leading)
-                .padding([.trailing], 260.0)
-                .padding(.top, 40)
-            
             HStack{
+                Text("코드 사진(선택)")
+                    .font(.body)
+                    .fontWeight(.medium)
+                    .foregroundColor(Color.gray)
+            
                 Image(systemName: "camera")
                     .foregroundColor(Color.gray)
-                    .padding([.leading], 300.0)
+                    .padding([.leading], 190.0)
                 Image(systemName: "photo")
                     .foregroundColor(Color.gray)
 
@@ -75,6 +73,7 @@ struct Add_Grammer_View: View {
                        Text("저장하기")
                     }
                 .buttonStyle(MyButtonStyle())
+                .padding(.top, 80)
             
         }
     }
