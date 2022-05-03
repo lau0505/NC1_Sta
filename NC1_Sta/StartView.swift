@@ -8,76 +8,82 @@
 import SwiftUI
 
 struct StartView: View {
+    
+    @State var showView: Bool = false
+    
     var body: some View {
-        ZStack{
-            Image("MockupImage")
-                .resizable()
-                .offset(x: 0, y: 0)
-                .frame(width: 416, height: 900)
-            
-            
-            VStack(alignment: .leading){
-            Text("나만의")
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundColor(Color.orange)
-                .multilineTextAlignment(.leading)
-                .padding([.top, .trailing], 50.0)
-            
-            Text("Swift 문법 저장소.")
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-                .foregroundColor(Color.orange)
-                .multilineTextAlignment(.leading)
-                .padding([.trailing], 100.0)
-            }
-            .offset(x: 10, y: -300)
-            Spacer().frame(height: 40)
-            
-            VStack(alignment: .leading){
-            
-            Text("어려웠던 영어 설명은 이제 그만!")
-                .font(.system(size: 15))
-                .fontWeight(.medium)
-                .foregroundColor(Color.orange)
-                .multilineTextAlignment(.leading)
-                .padding([.trailing], 100.0)
+        NavigationView{
+            ZStack{
+                Image("MockupImage")
+                    .resizable()
+                    .frame(width: 440, height: 953)
                 
-            Text("나만의 언어로 Swift 문법에 대해 정리해보세요.")
-                .font(.system(size: 15))
-                .fontWeight(.medium)
-                .foregroundColor(Color.orange)
-                .multilineTextAlignment(.leading)
-                .padding([.trailing], 40.0)
-            }
-            .offset(x: -10, y: -180)
-            
-            
-            Button(action: {}){ //버튼의 보여지는 UI 코드
-                       Text("시작하기")
+                
+                VStack(alignment: .leading){
+                    Text("나만의")
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color.orange)
+                        .padding([.top, .trailing], 80)
+                        .padding(.bottom, 5)
+                    
+                    Text("Swift 문법 저장소.")
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color.orange)
+                        .padding(.trailing, 100)
                 }
+                .offset(x: 10, y: -330)
+
+                
+                VStack(alignment: .leading){
+                    
+                    Text("어려웠던 영어 설명은 이제 그만!")
+                        .font(.system(size: 15))
+                        .fontWeight(.medium)
+                        .foregroundColor(Color.orange)
+                        .padding(.trailing, 100.0)
+                    
+                    Text("나만의 언어로 Swift 문법에 대해 정리해보세요.")
+                        .font(.system(size: 15))
+                        .fontWeight(.medium)
+                        .foregroundColor(Color.orange)
+                        .padding(.trailing, 30.0)
+                }
+                .offset(x: -10, y: -180)
+                
+                Button(action: {
+                    showView = true
+                }){ //버튼의 보여지는 UI 코드
+                    Text("시작하기")
+                }
+                .fullScreenCover(isPresented: $showView, content: {
+                    ContentView()
+                })
                 .buttonStyle(MyButtonStyle())
-                .padding(.bottom, 59)
+                .padding(.bottom, 200)
                 .offset(x: 0, y: 350)
+
+            }
         }
     }
 }
 
 
 struct MyButtonStyle: ButtonStyle {
+    
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .frame(maxWidth: 300)
-                        .frame(height: 45)
-                        .font(.system(size:20, weight: .bold, design: .rounded))
-                        .foregroundColor(Color.white)
-                        .background(Color.orange)
-                        .cornerRadius(30)
-                        .padding(.horizontal, 30)
+            .frame(height: 45)
+            .font(.system(size:20, weight: .bold, design: .rounded))
+            .foregroundColor(Color.white)
+            .background(Color.orange)
+            .cornerRadius(30)
+            .padding(.horizontal, 30)
     }
 }
-    
-    
+
 
 
 struct StartView_Previews: PreviewProvider {

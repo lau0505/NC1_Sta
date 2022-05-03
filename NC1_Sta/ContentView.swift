@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+   
+    
     var body: some View {
+        
         TabView {
-            Add_Grammer_View()
+            
+            Add_Grammar_View()
                 .tabItem {
                     Image(systemName: "pencil")
                     Text("문법 추가")
                 }
-            Grammer_Storage_View()
+            Grammar_Storage_View()
                 .tabItem {
                     Image(systemName: "book.fill")
                     Text("문법 저장소")
@@ -29,12 +34,14 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "gearshape.fill")
                     Text("설정")
-            }
+                    
+                        
         }
-    }
+    }.accentColor(Color("MainColor"))
+}
 }
 
-// accentColor(.orange)
+  
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

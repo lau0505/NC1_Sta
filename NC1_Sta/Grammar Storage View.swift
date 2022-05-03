@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct Grammer_Storage_View: View {
+struct Grammar_Storage_View: View {
     var body: some View {
-            Card_View(title: "조건문", meaning: "if/else")
+            Card_View(title: "조건문", meaning: "if/else / switch case;")
             
         }
 }
 
-struct Grammer_Storage_View_Previews: PreviewProvider {
+struct Grammar_Storage_View_Previews: PreviewProvider {
     static var previews: some View {
-      Grammer_Storage_View()
+      Grammar_Storage_View()
     }
 }

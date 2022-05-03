@@ -9,17 +9,10 @@ import SwiftUI
 
 struct Bookmark_View: View {
     var body: some View {
-        ZStack {
-                    Circle()
-                        .frame(width: 300, height: 300)
-                        .foregroundColor(.yellow)
-                    
-                    Text("\(3)")
-                        .font(.system(size: 70))
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                }
+        Text("이해완료")
     }
+    
+    
 }
 
 struct Bookmark_View_Previews: PreviewProvider {

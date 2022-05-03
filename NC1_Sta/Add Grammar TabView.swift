@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Add_Grammer_TabView: View {
+struct Add_Grammar_TabView: View {
    
     var body: some View {
        
@@ -63,8 +63,8 @@ struct Add_Grammer_TabView: View {
     }
 }
 
-struct Add_Grammer_TabView_Previews: PreviewProvider {
+struct Add_Grammar_TabView_Previews: PreviewProvider {
     static var previews: some View {
-        Add_Grammer_TabView()
+        Add_Grammar_TabView()
     }
 }

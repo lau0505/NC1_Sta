@@ -14,10 +14,15 @@ struct Setting_View: View {
     var body: some View {
         VStack{
         Toggle("알림 설정", isOn: $alert)
-        .padding()
+                .toggleStyle(SwitchToggleStyle(tint: Color.orange))
+                .padding(.horizontal, 30)
+                .padding(.bottom, 20)
         
         Toggle("다크모드 설정", isOn: $darkmode)
-        .padding()
+                .toggleStyle(SwitchToggleStyle(tint: Color.orange))
+                .padding(.horizontal, 30)
+                .padding(.bottom, 20)
+            
         .padding(.bottom, 500)
        }
         

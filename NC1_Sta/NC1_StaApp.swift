@@ -11,7 +11,7 @@ import SwiftUI
 struct NC1_StaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartView()
         }
     }
 }

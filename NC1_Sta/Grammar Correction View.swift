@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Grammer_Correction_View: View {
+struct Grammar_Correction_View: View {
     @State private var name = ""
     @State private var meaning = ""
     @State private var explanation = ""
@@ -21,38 +21,33 @@ struct Grammer_Correction_View: View {
             .font(.body)
             .fontWeight(.medium)
             .foregroundColor(Color.gray)
-            .multilineTextAlignment(.leading)
-            .padding(.top, 30)
-            .padding(.trailing, 300.0)
+            .padding(.trailing, 260)
         
             TextField("입력하세요" , text: $name)
-                .padding(.horizontal)
-                .padding(.bottom, 30)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.leading, 33)
+                .textFieldStyle(.automatic)
             
             Text("의미")
                 .font(.body)
                 .fontWeight(.medium)
                 .foregroundColor(Color.gray)
-                .multilineTextAlignment(.leading)
-                .padding(.trailing, 330.0)
+                .padding(.top, 30)
+                .padding(.trailing, 290)
             
             TextField("입력하세요" , text: $meaning)
-                .padding(.horizontal)
-                .padding(.bottom, 30)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.leading, 33)
+                .textFieldStyle(.automatic)
                   
             Text("설명")
                 .font(.body)
                 .fontWeight(.medium)
                 .foregroundColor(Color.gray)
-                .multilineTextAlignment(.leading)
-                .padding(.trailing, 330.0)
+                .padding(.top, 30)
+                .padding(.trailing, 290)
             
                 TextField("입력하세요" , text: $explanation)
-                    .padding(.horizontal)
-                    .padding(.bottom, 30)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.leading, 33)
+                    .textFieldStyle(.automatic)
             
             HStack{
                 Text("코드 사진(선택)")
@@ -63,13 +58,14 @@ struct Grammer_Correction_View: View {
                     
                 Image(systemName: "camera")
                     .foregroundColor(Color.gray)
-                    .padding(.leading, 190.0)
+                    .padding(.leading, 150.0)
                 Image(systemName: "photo")
                     .foregroundColor(Color.gray)
                 
 
             }
-            .padding(.bottom, 150)
+            .padding(.top, 30)
+            .padding(.bottom, 100)
           
             
             VStack{
@@ -95,13 +91,13 @@ struct Grammer_Correction_View: View {
                 
                 
             }
-               
+            .padding(.top, 50)
         }
     }
 }
 
-struct Grammer_Correction_View_Previews: PreviewProvider {
+struct Grammar_Correction_View_Previews: PreviewProvider {
     static var previews: some View {
-        Grammer_Correction_View()
+        Grammar_Correction_View()
     }
 }
