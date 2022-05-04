@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E022F26281D4AC400DDB0A8 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E022F25281D4AC400DDB0A8 /* StartView.swift */; };
+		8E20865F2822B8D900C166FC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20865E2822B8D900C166FC /* ImagePicker.swift */; };
 		8E473EC9281D0F1C002482C7 /* NC1_StaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E473EC8281D0F1C002482C7 /* NC1_StaApp.swift */; };
 		8E473ECB281D0F1C002482C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E473ECA281D0F1C002482C7 /* ContentView.swift */; };
 		8E473ECD281D0F1D002482C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E473ECC281D0F1D002482C7 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		8E022F25281D4AC400DDB0A8 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		8E20865E2822B8D900C166FC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		8E473EC5281D0F1C002482C7 /* NC1_Sta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NC1_Sta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E473EC8281D0F1C002482C7 /* NC1_StaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC1_StaApp.swift; sourceTree = "<group>"; };
 		8E473ECA281D0F1C002482C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				8EE8F1D828225C7B00CDB306 /* SearchBar.swift */,
 				8E473ECC281D0F1D002482C7 /* Assets.xcassets */,
 				8E473ECE281D0F1D002482C7 /* Preview Content */,
+				8E20865E2822B8D900C166FC /* ImagePicker.swift */,
 			);
 			path = NC1_Sta;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				8EE8F1D928225C7B00CDB306 /* SearchBar.swift in Sources */,
 				8E473ECB281D0F1C002482C7 /* ContentView.swift in Sources */,
 				8E5F59B6281D92270099CEEF /* Bookmark View.swift in Sources */,
+				8E20865F2822B8D900C166FC /* ImagePicker.swift in Sources */,
 				8E5F59B4281D91F20099CEEF /* Grammar Correction View.swift in Sources */,
 				8EE8F1D72822536400CDB306 /* SearchBar View.swift in Sources */,
 				8E022F26281D4AC400DDB0A8 /* StartView.swift in Sources */,

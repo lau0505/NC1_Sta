@@ -11,6 +11,8 @@ struct SearchBar_View: View {
     
     @State var searchCard: [String]
     @State var cards: [card]
+    @State var bookCards: [bookCard]
+//    @State var image: Image
     
     @State private var searchText = ""
     
@@ -26,15 +28,21 @@ struct SearchBar_View: View {
 //                    ForEach(searchCard.filter{$0.hasPrefix(searchText) || searchText == ""}, id:\.self) {
 //                        searchText in Text(searchText)
 //                    }
+                    
                     ForEach(cards, id: \.self) { card in
                         if card.title == searchText {
                             
                             Card_View(title: card.title, meaning: card.meaning)
                                 .sheet(isPresented: self.$showModal) {
-                                    Grammar_Correction_View(name: card.title, meaning: card.meaning, explanation: card.explanation)
+                                    Grammar_Correction_View(name: card.title, meaning: card.meaning, explanation: card.explanation, image: card.image, cards: $cards, bookCards: $bookCards)
                                 }
+                            
                         }
                     }
+                    
+                    
+                    
+                    
                 } //리스트의 스타일 수정
                 .listStyle(PlainListStyle())
                 //화면 터치시 키보드 숨김

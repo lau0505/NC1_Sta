@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Add_Grammar_View: View {
+    @State var imagePickerPresented = false
+    @State var selectedImage: UIImage?
+    @State var grammarImage: Image?
     
     @State private var name: String = ""
     @State private var meaning = ""
@@ -64,8 +67,30 @@ struct Add_Grammar_View: View {
                     Image(systemName: "camera")
                         .foregroundColor(Color.gray)
                         .padding(.leading, 150.0)
-                    Image(systemName: "photo")
-                        .foregroundColor(Color.gray)
+                    
+                    Button(action: {
+                        imagePickerPresented.toggle()
+                    }, label: {
+                        VStack {
+                            let image = grammarImage == nil ? Image(systemName: "photo") : grammarImage ?? Image(systemName: "photo")
+                            image
+                                .resizable()
+                                .scaledToFill()
+                                .foregroundColor(Color.gray)
+                                .frame(width: 15, height: 15)
+                        }
+                    })
+                    .sheet(isPresented: $imagePickerPresented,
+                           onDismiss: loadImage,
+                           content: { ImagePicker(image: $selectedImage) })
+                    .padding(.bottom, 20)
+                    
+                    
+//                    grammarImage
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fill)
+//                        .frame(width: 100, height: 100)
+                    
                     
                 }
                 .padding(.top, 30)
@@ -75,9 +100,9 @@ struct Add_Grammar_View: View {
                 
                 Button(action: {
                     self.showingAlert.toggle()
-                    cards.append(card(title: name, meaning: meaning, explanation: explanation))
+                    cards.append(card(title: name, meaning: meaning, explanation: explanation, image: grammarImage == nil ? Image(systemName: "photo") : grammarImage!))
                 }){ //버튼의 보여지는 UI 코드
-                    Text("저장하기")
+                    Text("추가하기")
                 }
                 .alert(isPresented: $showingAlert) {
                             Alert(title: Text("저장완료"), message: nil,
@@ -90,6 +115,10 @@ struct Add_Grammar_View: View {
             }
         }
         .navigationBarHidden(false)
+    }
+    func loadImage() {
+        guard let selectedImage = selectedImage else { return }
+        grammarImage = Image(uiImage: selectedImage)
     }
 }
 

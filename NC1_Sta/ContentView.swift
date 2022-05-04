@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State var cards: [card] = []
+    @State var bookCards: [bookCard] = []
     
     var body: some View {
         TabView {
@@ -19,12 +20,12 @@ struct ContentView: View {
                     Image(systemName: "pencil")
                     Text("문법 추가")
                 }
-            Grammar_Storage_View(cards: $cards)
+            Grammar_Storage_View(cards: $cards, bookCards: $bookCards)
                 .tabItem {
                     Image(systemName: "book.fill")
                     Text("문법 저장소")
                 }
-            Bookmark_View()
+            Bookmark_View(cards: $cards, bookCards: $bookCards)
                 .tabItem {
                     Image(systemName: "bookmark.fill")
                     Text("북마크")

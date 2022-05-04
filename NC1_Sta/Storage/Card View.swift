@@ -58,12 +58,14 @@ struct Card_View: View {
                         .foregroundColor(Color.white)
 //                        .padding(.bottom, 20)
                         .padding(.leading, 20)
+                        .padding(.top, 20)
                     
                     Text("\(meaning)")
                         .font(.body)
                         .fontWeight(.medium)
                         .foregroundColor(Color("CustomGrayColor"))
                         .padding(.leading, 20)
+                        .padding(.top, 20)
                     
                 }
                 Spacer()
@@ -82,8 +84,8 @@ struct Card_View: View {
     }
 }
 
-struct Card_View_Previews: PreviewProvider {
-    static var previews: some View {
-        Card_View(title: "조건문", meaning: "if/else; , switch/case;")
-    }
-}
+//struct Card_View_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Card_View(title: "조건문", meaning: "if/else; , switch/case;")
+//    }
+//}

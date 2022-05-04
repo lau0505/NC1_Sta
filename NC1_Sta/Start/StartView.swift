@@ -24,14 +24,14 @@ struct StartView: View {
                     Text("나만의")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
-                        .foregroundColor(Color.orange)
+                        .foregroundColor(Color("MainColor"))
                         .padding([.top, .trailing], 80)
                         .padding(.bottom, 5)
                     
                     Text("Swift 문법 저장소.")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
-                        .foregroundColor(Color.orange)
+                        .foregroundColor(Color("MainColor"))
                         .padding(.trailing, 100)
                 }
                 .offset(x: 10, y: -330)
@@ -42,13 +42,13 @@ struct StartView: View {
                     Text("어려웠던 영어 설명은 이제 그만!")
                         .font(.system(size: 15))
                         .fontWeight(.medium)
-                        .foregroundColor(Color.orange)
+                        .foregroundColor(Color("MainColor"))
                         .padding(.trailing, 100.0)
                     
                     Text("나만의 언어로 Swift 문법에 대해 정리해보세요.")
                         .font(.system(size: 15))
                         .fontWeight(.medium)
-                        .foregroundColor(Color.orange)
+                        .foregroundColor(Color("MainColor"))
                         .padding(.trailing, 30.0)
                 }
                 .offset(x: -10, y: -180)
@@ -79,7 +79,7 @@ struct MyButtonStyle: ButtonStyle {
             .frame(height: 45)
             .font(.system(size:20, weight: .bold, design: .rounded))
             .foregroundColor(Color.white)
-            .background(Color.orange)
+            .background(Color("MainColor"))
             .cornerRadius(30)
             .padding(.horizontal, 30)
     }
