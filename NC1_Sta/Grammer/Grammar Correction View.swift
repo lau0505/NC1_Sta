@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct Grammar_Correction_View: View {
-    @State private var name = ""
-    @State private var meaning = ""
-    @State private var explanation = ""
+    @State var name: String
+    @State var meaning: String
+    @State var explanation: String
     
     var body: some View {
-        
+        NavigationView{
        
         VStack{
  
@@ -92,12 +92,14 @@ struct Grammar_Correction_View: View {
                 
             }
             .padding(.top, 50)
+            .padding(.bottom, 150)
         }
+        }.navigationBarHidden(false)
     }
 }
 
-struct Grammar_Correction_View_Previews: PreviewProvider {
-    static var previews: some View {
-        Grammar_Correction_View()
-    }
-}
+//struct Grammar_Correction_View_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Grammar_Correction_View()
+//    }
+//}

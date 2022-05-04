@@ -8,31 +8,47 @@
 import SwiftUI
 
 struct Card_View: View {
+    @State var showCardView: Bool = false
     @State var title: String
     @State var meaning: String
-    
+    @State var isActive = false
     var body: some View {
+//        NavigationView{
         VStack(alignment: .trailing) {
-            Menu {
-                NavigationLink {
-                    Grammar_Correction_View()
-                } label: {
-                    Text("수정하기")
-                }
-                
-                
-                Button {
-                    
-                } label: {
-                    Text("삭제하기")
-                }
-                
-            } label: {
-                Text(":")
-                    .font(.system(size: 35))
-                    .foregroundColor(.white)
-                    .padding(.trailing)
-            }
+//            Menu {
+//
+//                Button {
+//                    isActive = true
+//                } label: {
+//                    Text("수정하기")
+//                }
+//
+////                Button {
+////                    isActive = true
+////                } label: {
+////                    Text("삭제하기")
+////                }
+//
+//            } label: {
+//                Text(":")
+//                    .font(.system(size: 35))
+//                    .foregroundColor(.white)
+//                    .padding(.trailing)
+//            }
+//            .background(
+//                NavigationLink(destination: Grammar_Correction_View(), isActive: $isActive) {
+//                    Text("")
+//                }
+//            )
+//
+//            HStack {
+//                Spacer()
+//                Button(action: {
+//
+//                }, label: {
+//                    Text(
+//                })
+//            }
             
             HStack {
                 VStack(alignment: .leading) {
@@ -40,7 +56,7 @@ struct Card_View: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
-                        .padding(.bottom, 20)
+//                        .padding(.bottom, 20)
                         .padding(.leading, 20)
                     
                     Text("\(meaning)")
@@ -61,8 +77,8 @@ struct Card_View: View {
             RoundedRectangle(cornerRadius: 20)
                 .stroke(Color("MainColor"))
         )
-        .padding([.top, .horizontal])
         
+//        }
     }
 }
 

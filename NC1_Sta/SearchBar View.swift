@@ -9,13 +9,12 @@ import SwiftUI
 
 struct SearchBar_View: View {
     
-    let array = [
-        "김서근", "포뇨", "하울", "소피아", "캐시퍼", "소스케",
-        "치히로", "하쿠", "가오나시", "제니바", "카브", "마르클",
-        "토토로", "사츠키", "지브리", "스튜디오", "캐릭터"
-    ]
+    @State var searchCard: [String]
+    @State var cards: [card]
     
     @State private var searchText = ""
+    
+    @State var showModal = false
     
     var body: some View {
         NavigationView {
@@ -24,8 +23,17 @@ struct SearchBar_View: View {
                     .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                 
                 List {
-                    ForEach(array.filter{$0.hasPrefix(searchText) || searchText == ""}, id:\.self) {
-                        searchText in Text(searchText)
+//                    ForEach(searchCard.filter{$0.hasPrefix(searchText) || searchText == ""}, id:\.self) {
+//                        searchText in Text(searchText)
+//                    }
+                    ForEach(cards, id: \.self) { card in
+                        if card.title == searchText {
+                            
+                            Card_View(title: card.title, meaning: card.meaning)
+                                .sheet(isPresented: self.$showModal) {
+                                    Grammar_Correction_View(name: card.title, meaning: card.meaning, explanation: card.explanation)
+                                }
+                        }
                     }
                 } //리스트의 스타일 수정
                 .listStyle(PlainListStyle())
@@ -34,27 +42,17 @@ struct SearchBar_View: View {
 //                    hideKeyboard()
 //                }
             }
-            .navigationBarTitle("검색기능")
-            .navigationBarItems(trailing:
-                                    HStack{
-                Button(action: {
-                }) {
-                    HStack {
-                        Image(systemName: "magnifyingglass")
-                    }
-                }
-            }
-            )
+//            .navigationBarTitle("검색기능", displayMode: .inline)
         }
     }
 }
 
 
-struct SearchBar_View_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchBar_View()
-    }
-}
+//struct SearchBar_View_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SearchBar_View()
+//    }
+//}
 
 
 

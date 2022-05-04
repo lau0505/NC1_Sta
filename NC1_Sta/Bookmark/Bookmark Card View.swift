@@ -14,26 +14,7 @@ struct Bookmark_Card_View: View {
     var body: some View {
         VStack(alignment: .trailing) {
             
-            Menu {
-                NavigationLink {
-                    Grammar_Correction_View()
-                } label: {
-                    Text("수정하기")
-                }
-                
-                
-                Button {
-                    
-                } label: {
-                    Text("삭제하기")
-                }
-                
-            } label: {
-                Text(":")
-                    .font(.system(size: 35))
-                    .foregroundColor(.white)
-                    .padding(.trailing)
-            }
+            
     
     HStack {
         VStack(alignment: .leading) {

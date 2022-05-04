@@ -9,18 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     
-   
+    @State var cards: [card] = []
     
     var body: some View {
-        
         TabView {
             
-            Add_Grammar_View()
+            Add_Grammar_View(cards: $cards)
                 .tabItem {
                     Image(systemName: "pencil")
                     Text("문법 추가")
                 }
-            Grammar_Storage_View()
+            Grammar_Storage_View(cards: $cards)
                 .tabItem {
                     Image(systemName: "book.fill")
                     Text("문법 저장소")
@@ -30,15 +29,13 @@ struct ContentView: View {
                     Image(systemName: "bookmark.fill")
                     Text("북마크")
                 }
-            Setting_View()
-                .tabItem {
-                    Image(systemName: "gearshape.fill")
-                    Text("설정")
-                    
-                        
-        }
-    }.accentColor(Color("MainColor"))
-}
+//            Setting_View()
+//                .tabItem {
+//                    Image(systemName: "gearshape.fill")
+//                    Text("설정")
+//                }
+        }.accentColor(Color("MainColor"))
+    }
 }
 
   

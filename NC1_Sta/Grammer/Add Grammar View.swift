@@ -13,6 +13,10 @@ struct Add_Grammar_View: View {
     @State private var meaning = ""
     @State private var explanation = ""
     
+    @State private var showingAlert = false
+    
+    @Binding var cards: [card]
+    
     var body: some View {
         NavigationView{
             VStack{
@@ -69,9 +73,16 @@ struct Add_Grammar_View: View {
                 
                 
                 
-                Button(action: {}){ //버튼의 보여지는 UI 코드
+                Button(action: {
+                    self.showingAlert.toggle()
+                    cards.append(card(title: name, meaning: meaning, explanation: explanation))
+                }){ //버튼의 보여지는 UI 코드
                     Text("저장하기")
                 }
+                .alert(isPresented: $showingAlert) {
+                            Alert(title: Text("저장완료"), message: nil,
+                                  dismissButton: .default(Text("확인")))
+                        }
                 .buttonStyle(MyButtonStyle())
                 .padding(.top, 30)
                 
@@ -85,8 +96,8 @@ struct Add_Grammar_View: View {
 
 
 
-struct Add_Grammar_View_Previews: PreviewProvider {
-    static var previews: some View {
-        Add_Grammar_View()
-    }
-}
+//struct Add_Grammar_View_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Add_Grammar_View()
+//    }
+//}
