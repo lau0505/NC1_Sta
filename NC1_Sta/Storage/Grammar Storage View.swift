@@ -7,17 +7,18 @@
 
 import SwiftUI
 
-struct Grammar_Storage_View: View {
+struct Grammar_Storage_View: View{
+    
     var body: some View {
         ZStack{
         
             Image(systemName: "magnifyingglass")
                 .foregroundColor(Color("MainColor"))
                 .font(.system(size: 35))
-                .padding(.bottom, 700)
+                .padding(.bottom, 650)
                 .padding(.leading, 280)
             
-            Card_View(title: "조건문", meaning: "if/else / switch case;")
+            Card_View(title: "조건문", meaning: "if/else; , switch/case;")
             
         }
     }

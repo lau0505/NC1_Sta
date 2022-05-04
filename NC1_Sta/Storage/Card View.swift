@@ -13,17 +13,27 @@ struct Card_View: View {
     
     var body: some View {
         VStack(alignment: .trailing) {
-            Button(action: {
+            Menu {
+                NavigationLink {
+                    Grammar_Correction_View()
+                } label: {
+                    Text("수정하기")
+                }
                 
-            }, label: {
+                
+                Button {
+                    
+                } label: {
+                    Text("삭제하기")
+                }
+                
+            } label: {
                 Text(":")
                     .font(.system(size: 35))
                     .foregroundColor(.white)
                     .padding(.trailing)
-                
-                
-            })
-           
+            }
+            
             HStack {
                 VStack(alignment: .leading) {
                     Text("\(title)")
@@ -38,7 +48,7 @@ struct Card_View: View {
                         .fontWeight(.medium)
                         .foregroundColor(Color("CustomGrayColor"))
                         .padding(.leading, 20)
-                       
+                    
                 }
                 Spacer()
             }
@@ -47,17 +57,17 @@ struct Card_View: View {
         .frame(width: 330, height: 200)
         .background(Color.orange)
         .cornerRadius(20)
-            .overlay(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color("MainColor"))
-            )
-            .padding([.top, .horizontal])
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(Color("MainColor"))
+        )
+        .padding([.top, .horizontal])
         
     }
 }
 
 struct Card_View_Previews: PreviewProvider {
     static var previews: some View {
-        Card_View(title: "조건문", meaning: "if/else")
+        Card_View(title: "조건문", meaning: "if/else; , switch/case;")
     }
 }

@@ -20,6 +20,8 @@
 		8E5F59C02821140F0099CEEF /* Card View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F59BF2821140F0099CEEF /* Card View.swift */; };
 		8EE8F1CE282171E700CDB306 /* Button View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE8F1CD282171E700CDB306 /* Button View.swift */; };
 		8EE8F1D52821887100CDB306 /* Bookmark Card View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE8F1D42821887100CDB306 /* Bookmark Card View.swift */; };
+		8EE8F1D72822536400CDB306 /* SearchBar View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE8F1D62822536400CDB306 /* SearchBar View.swift */; };
+		8EE8F1D928225C7B00CDB306 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE8F1D828225C7B00CDB306 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		8E5F59BF2821140F0099CEEF /* Card View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card View.swift"; sourceTree = "<group>"; };
 		8EE8F1CD282171E700CDB306 /* Button View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button View.swift"; sourceTree = "<group>"; };
 		8EE8F1D42821887100CDB306 /* Bookmark Card View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bookmark Card View.swift"; sourceTree = "<group>"; };
+		8EE8F1D62822536400CDB306 /* SearchBar View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchBar View.swift"; sourceTree = "<group>"; };
+		8EE8F1D828225C7B00CDB306 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 				8EE8F1D12821831800CDB306 /* Bookmark */,
 				8EE8F1D02821830400CDB306 /* Setting */,
 				8EE8F1CD282171E700CDB306 /* Button View.swift */,
+				8EE8F1D62822536400CDB306 /* SearchBar View.swift */,
+				8EE8F1D828225C7B00CDB306 /* SearchBar.swift */,
 				8E473ECC281D0F1D002482C7 /* Assets.xcassets */,
 				8E473ECE281D0F1D002482C7 /* Preview Content */,
 			);
@@ -204,9 +210,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EE8F1D928225C7B00CDB306 /* SearchBar.swift in Sources */,
 				8E473ECB281D0F1C002482C7 /* ContentView.swift in Sources */,
 				8E5F59B6281D92270099CEEF /* Bookmark View.swift in Sources */,
 				8E5F59B4281D91F20099CEEF /* Grammar Correction View.swift in Sources */,
+				8EE8F1D72822536400CDB306 /* SearchBar View.swift in Sources */,
 				8E022F26281D4AC400DDB0A8 /* StartView.swift in Sources */,
 				8E5F59C02821140F0099CEEF /* Card View.swift in Sources */,
 				8E5F59AE281D620A0099CEEF /* Add Grammar View.swift in Sources */,

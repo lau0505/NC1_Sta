@@ -13,63 +13,75 @@ struct Bookmark_Card_View: View {
     
     var body: some View {
         VStack(alignment: .trailing) {
-            Button(action: {
+            
+            Menu {
+                NavigationLink {
+                    Grammar_Correction_View()
+                } label: {
+                    Text("수정하기")
+                }
                 
-            }, label: {
+                
+                Button {
+                    
+                } label: {
+                    Text("삭제하기")
+                }
+                
+            } label: {
                 Text(":")
                     .font(.system(size: 35))
                     .foregroundColor(.white)
                     .padding(.trailing)
-                
-                
-            })
-            
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("\(title)")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.white)
-                        .padding(.bottom, 20)
-                        .padding(.leading, 20)
-                    
-                    Text("\(meaning)")
-                        .font(.body)
-                        .fontWeight(.medium)
-                        .foregroundColor(Color("CustomGrayColor"))
-                        .padding(.leading, 20)
-                    
-                    HStack{
-                        Image(systemName: "checkmark")
-                            .foregroundColor(Color.green)
-                            .padding(.leading, 220)
-                            .padding(.top, 20)
-                        Text("이해완료")
-                            .font(.body)
-                            .foregroundColor(Color.white)
-                            .padding(.top, 20)
-                    
-                    }
-                    
-                }
-                Spacer()
             }
-            Spacer()
+    
+    HStack {
+        VStack(alignment: .leading) {
+            Text("\(title)")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
+                .padding(.bottom, 20)
+                .padding(.leading, 20)
+            
+            Text("\(meaning)")
+                .font(.body)
+                .fontWeight(.medium)
+                .foregroundColor(Color("CustomGrayColor"))
+                .padding(.leading, 20)
+            
+            HStack{
+                Image(systemName: "checkmark")
+                    .foregroundColor(Color.green)
+                    .padding(.leading, 220)
+                    .padding(.top, 10)
+                Text("이해완료")
+                    .font(.body)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white)
+                    .padding(.top, 10)
+                
+            }
+            
         }
-        .frame(width: 330, height: 200)
-        .background(Color.orange)
-        .cornerRadius(20)
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(Color("MainColor"))
-        )
-        .padding([.top, .horizontal])
-        
+        Spacer()
     }
+    Spacer()
+}
+    .frame(width: 330, height: 200)
+    .background(Color.orange)
+    .cornerRadius(20)
+    .overlay(
+        RoundedRectangle(cornerRadius: 20)
+            .stroke(Color("MainColor"))
+    )
+    .padding([.top, .horizontal])
+
+}
 }
 
 struct Bookmark_Card_View_Previews: PreviewProvider {
     static var previews: some View {
-        Bookmark_Card_View(title: "조건문", meaning: "if/else;")
+        Bookmark_Card_View(title: "조건문", meaning: "if/else; switch/case;")
     }
 }

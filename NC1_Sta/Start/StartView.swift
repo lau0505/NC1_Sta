@@ -17,6 +17,7 @@ struct StartView: View {
                 Image("MockupImage")
                     .resizable()
                     .frame(width: 440, height: 953)
+//                    .offset(x: 0, y: 0)
                 
                 
                 VStack(alignment: .leading){

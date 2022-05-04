@@ -69,12 +69,12 @@ struct Add_Grammar_View: View {
                 
                 
                 
-                    Button(action: {}){ //버튼의 보여지는 UI 코드
-                        Text("저장하기")
-                    }
-                    .buttonStyle(MyButtonStyle())
-                    .padding(.top, 30)
-                    
+                Button(action: {}){ //버튼의 보여지는 UI 코드
+                    Text("저장하기")
+                }
+                .buttonStyle(MyButtonStyle())
+                .padding(.top, 30)
+                
                 
             }
         }
@@ -82,7 +82,8 @@ struct Add_Grammar_View: View {
     }
 }
 
-              
+
+
 
 struct Add_Grammar_View_Previews: PreviewProvider {
     static var previews: some View {

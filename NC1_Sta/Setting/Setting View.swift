@@ -28,6 +28,7 @@ struct Setting_View: View {
                 .padding(.horizontal, 30)
                 .padding(.bottom, 20)
             
+           
         .padding(.bottom, 500)
        }
         
