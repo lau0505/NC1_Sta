@@ -78,6 +78,7 @@ struct Add_Grammar_View: View {
                                 .scaledToFill()
                                 .foregroundColor(Color.gray)
                                 .frame(width: 15, height: 15)
+                                .padding(.top, 20)
                         }
                     })
                     .sheet(isPresented: $imagePickerPresented,

@@ -16,7 +16,7 @@ struct SearchBar_View: View {
     
     @State private var searchText = ""
     
-    @State var showModal = false
+    @State var showModal = true
     
     var body: some View {
         NavigationView {
