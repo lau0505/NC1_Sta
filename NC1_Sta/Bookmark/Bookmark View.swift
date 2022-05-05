@@ -27,7 +27,7 @@ struct Bookmark_View: View {
             .navigationBarItems(trailing:
                                     NavigationLink(
                                         destination: {
-                                            var searchCard = cards.map {
+                                            let searchCard = cards.map {
                                                 $0.title
                                             }
                                             SearchBar_View(searchCard: searchCard, cards: cards, bookCards: bookCards)
@@ -48,5 +48,3 @@ struct Bookmark_View: View {
 //        Bookmark_View()
 //    }
 //}
-
-//Bookmark_Card_View(title: "조건문", meaning: "if/else; , switch/case;")

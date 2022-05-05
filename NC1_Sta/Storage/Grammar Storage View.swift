@@ -35,7 +35,7 @@ struct Grammar_Storage_View: View{
             .navigationBarItems(trailing:
                                     NavigationLink(
                                         destination: {
-                                            var searchCard = cards.map {
+                                            let searchCard = cards.map {
                                                 $0.title
                                             }
                                             SearchBar_View(searchCard: searchCard, cards: cards, bookCards: bookCards)
@@ -50,23 +50,9 @@ struct Grammar_Storage_View: View{
             )
             .padding(.top, 20)
         }
-        //        .navigationBarItems(trailing: {
-        //            HStack{
-        //                Spacer()
-        //                Image(systemName: "magnifyingglass")
-        //                    .foregroundColor(Color("MainColor"))
-        //                    .font(.system(size: 35))
-        //            }
-        //        })
-        
     }
 }
 
-//struct Grammar_Storage_View_Previews: PreviewProvider {
-//    static var previews: some View {
-//      Grammar_Storage_View()
-//    }
-//}
 
 struct card: Hashable {
     var title: String
@@ -87,11 +73,12 @@ struct bookCard: Hashable {
     var meaning: String
     var explanation: String
     var state: String
-//    var image: Image
-//
-//    func hash(into hasher: inout Hasher) {
-//        hasher.combine(title)
-//        hasher.combine(meaning)
-//        hasher.combine(explanation)
-//    }
+    
 }
+
+
+//struct Grammar_Storage_View_Previews: PreviewProvider {
+//    static var previews: some View {
+//      Grammar_Storage_View()
+//    }
+//}

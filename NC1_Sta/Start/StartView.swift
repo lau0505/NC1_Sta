@@ -17,7 +17,8 @@ struct StartView: View {
                 Image("MockupImage")
                     .resizable()
                     .frame(width: 440, height: 953)
-//                    .offset(x: 0, y: 0)
+                    .opacity(0.9)
+                    .offset(x: -17, y: -95)
                 
                 
                 VStack(alignment: .leading){
@@ -41,13 +42,13 @@ struct StartView: View {
                     
                     Text("어려웠던 영어 설명은 이제 그만!")
                         .font(.system(size: 15))
-                        .fontWeight(.medium)
+                        .fontWeight(.semibold)
                         .foregroundColor(Color("MainColor"))
                         .padding(.trailing, 100.0)
                     
                     Text("나만의 언어로 Swift 문법에 대해 정리해보세요.")
                         .font(.system(size: 15))
-                        .fontWeight(.medium)
+                        .fontWeight(.semibold)
                         .foregroundColor(Color("MainColor"))
                         .padding(.trailing, 30.0)
                 }

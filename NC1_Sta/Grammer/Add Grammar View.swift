@@ -30,7 +30,6 @@ struct Add_Grammar_View: View {
                     .foregroundColor(Color.gray)
                     .padding(.trailing, 260)
                 
-                
                 TextField("입력하세요" , text: $name)
                     .padding(.leading, 33)
                     .textFieldStyle(.automatic)
@@ -62,11 +61,13 @@ struct Add_Grammar_View: View {
                         .font(.body)
                         .fontWeight(.medium)
                         .foregroundColor(Color.gray)
+                        .padding(.bottom, 30)
+                        .padding(.trailing, 160)
                     
                     
                     Image(systemName: "camera")
                         .foregroundColor(Color.gray)
-                        .padding(.leading, 150.0)
+                        .padding(.bottom, 25)
                     
                     Button(action: {
                         imagePickerPresented.toggle()
@@ -78,20 +79,13 @@ struct Add_Grammar_View: View {
                                 .scaledToFill()
                                 .foregroundColor(Color.gray)
                                 .frame(width: 15, height: 15)
-                                .padding(.top, 20)
+                                .padding(.bottom, 23)
+                                .padding(.trailing, 10)
                         }
                     })
                     .sheet(isPresented: $imagePickerPresented,
                            onDismiss: loadImage,
                            content: { ImagePicker(image: $selectedImage) })
-                    .padding(.bottom, 20)
-                    
-                    
-//                    grammarImage
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fill)
-//                        .frame(width: 100, height: 100)
-                    
                     
                 }
                 .padding(.top, 30)
@@ -106,9 +100,9 @@ struct Add_Grammar_View: View {
                     Text("추가하기")
                 }
                 .alert(isPresented: $showingAlert) {
-                            Alert(title: Text("저장완료"), message: nil,
-                                  dismissButton: .default(Text("확인")))
-                        }
+                    Alert(title: Text("추가완료!"), message: nil,
+                          dismissButton: .default(Text("확인")))
+                }
                 .buttonStyle(MyButtonStyle())
                 .padding(.top, 30)
                 
