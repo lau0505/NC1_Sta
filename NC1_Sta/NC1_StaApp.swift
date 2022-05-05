@@ -13,5 +13,6 @@ struct NC1_StaApp: App {
         WindowGroup {
             StartView()
         }
+        
     }
 }
