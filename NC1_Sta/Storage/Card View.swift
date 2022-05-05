@@ -48,8 +48,8 @@ struct Card_View: View {
     }
 }
 
-struct Card_View_Previews: PreviewProvider {
-    static var previews: some View {
-        Card_View(title: "조건문", meaning: "if/else; , switch/case;")
-    }
-}
+//struct Card_View_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Card_View(title: "조건문", meaning: "if/else; , switch/case;")
+//    }
+//}
